@@ -1,0 +1,41 @@
+<section id="main-slider-section" class="main-slider-section mb-30 clearfix">
+
+  <div class="main-slider owl-theme">
+    <owl-carousel #owlElement [options]="{items: 1, dots: true, navigation: true}" [items]="images" [carouselClasses]="['owl-theme', 'sliding']">
+      <div class="item flipInX animated" *ngFor="let image of images;let i = index">
+        <div class="row">
+
+          <div class="col l6 m6">
+            <div class="item-child-left left-align">
+              <h2 class="hi">{{image.title}}</h2>
+              <p class="name">{{image.content}}</p>
+              <small class="position mb-30">{{image.detail}}</small>
+
+              <a href="#!" class="custom-btn waves-effect waves-light">
+                <i class="fa fa-picture-o" aria-hidden="true"></i> view protfolio
+              </a>
+            </div>
+            <!-- /.item-child-left -->
+          </div>
+          <!-- coll6 -->
+
+          <div class="col l6 m6">
+            <div class="item-child-right right-align">
+              <img src="assets/images/{{image.file}}" alt="Image">
+              <a href="#" class="chat waves-effect waves-light">
+                <i class="far fa-comment-dots" aria-hidden="true"></i>
+              </a>
+            </div>
+            <!-- /.item-child-right -->
+          </div>
+          <!-- coll6 -->
+
+        </div>
+        <!-- row -->
+      </div>
+    </owl-carousel>
+  </div>
+  <!-- /.main-slider -->
+
+</section>
+<!-- /.main-slider-section -->

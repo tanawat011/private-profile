@@ -1,0 +1,110 @@
+<div data-scroll='2' class="my-skill-section sec-p100-bg-bs mb-30 clearfix" id="skill">
+  <div class="Section-title">
+    <h2>
+      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      My Skills
+    </h2>
+    <span>My Skills</span>
+    <p>
+      Coming Soon...
+    </p>
+  </div>
+  <!-- /.Section-title -->
+
+  <div class="professional-skills-area">
+    <ul class="tabs skills-tab ul-li">
+      <li class="tab tag-item tag-icon">
+        <i class="fa fa-tags" aria-hidden="true"></i>
+      </li>
+      <li *ngFor="let item of Tags" class="tab tag-item">
+        <a href="#" [class]="item.is_active ? 'active' : ''">{{item.title}}</a>
+      </li>
+    </ul>
+    <div id="graphicdesign">
+
+      <ng-container *ngFor="let item of SkillProgress">
+        <h2 class="title" style="margin-top: 10px">{{item.title}}</h2>
+
+        <div class="skill_progress">
+
+          <div class="row">
+            <div class="col l6 m6 s12">
+
+              <div *ngFor="let data_left of item.data_left" class="single_experties">
+                <div class="skilled-tittle">{{data_left.title}}</div>
+                <div class="progress">
+                  <div class="progress-bar {{data_left.class}}-bg wow Rx-width-{{data_left.percent}} animated" role="progressbar"
+                    [attr.data-wow-duration]="data_left.duration" [attr.data-wow-delay]="data_left.delay" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <span class="{{data_left.class}}-color">{{data_left.percent}}%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /single_experties -->
+            </div>
+            <!-- colm6 -->
+
+            <div class="col l6 m6 s12">
+
+              <div *ngFor="let data_right of item.data_right" class="single_experties">
+                <div class="skilled-tittle">{{data_right.title}}</div>
+                <div class="progress">
+                  <div class="progress-bar {{data_right.class}}-bg wow Rx-width-{{data_right.percent}} animated" role="progressbar"
+                    [attr.data-wow-duration]="data_right.duration" [attr.data-wow-delay]="data_right.delay"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <span class="{{data_right.class}}-color">{{data_right.percent}}%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /single_experties -->
+            </div>
+            <!-- colm6 -->
+          </div>
+          <!-- row -->
+
+        </div>
+        <!-- /.skill_progress -->
+      </ng-container>
+
+    </div>
+
+  </div>
+  <!-- /.professional-skills-area -->
+
+  <!-- <div class="languages-skills">
+    <div class="row">
+
+      <div class="col l6 m12 s12">
+        <div class="lang-skill-left">
+          <h2 class="title mb-30">languages skills</h2>
+
+          <p class="mb-30">
+            Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+            ipsum, nec sagittis sem nibh id elit. Duis sed odio sit.
+          </p>
+
+          <a href="#" class="common-color">https://www.youtube.com</a>
+        </div> -->
+        <!-- /.lang-skill-left -->
+      <!-- </div> -->
+      <!-- colm6 -->
+      <!-- <div class="col l6 m12 s12">
+        <div class="lang-skill-right">
+
+          <div class="skill-piechart">
+            <div class="second circle">
+              <strong>ENGLISH</strong>
+            </div>
+          </div> -->
+          <!-- /pie-chart -->
+        <!-- </div>
+      </div> -->
+      <!-- colm6 -->
+
+    <!-- </div> -->
+    <!-- row -->
+  <!-- </div> -->
+  <!-- /.languages-skills -->
+
+</div>
+<!-- /.my-skill-section -->

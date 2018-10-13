@@ -1,0 +1,96 @@
+<header id="header-section" class="header-section mb-30 clearfix">
+  <div class="">
+    <nav class="main-nav">
+      <div class="nav-wrapper main-nav-wrapper">
+
+        <ul class="alternative-menu ul-li responsive_menu_fixed">
+
+          <li class="alt-search-area">
+            <form action="#">
+              <input class="alternative-search" type="search" placeholder="search">
+              <button><i class="fa fa-search"></i></button>
+            </form>
+          </li>
+
+          <li class="side-menu-btn right">
+            <a href="#" class="button-collapse waves-effect default" data-activates="mobile-demo">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- /.alternative-menu -->
+        <div class=" hello_icon_menu hello_single_index_menu1">
+          <ul class="ul-li-block side-nav" id="mobile-demo">
+
+            <li class="sn-user">
+              <span class="sn-user-img">
+                <img src="assets/images/akshay1.png" alt="Image">
+              </span>
+              <span class="sn-user-name">
+                Akshay
+              </span>
+              <a href="#" class="sn-cv-link common-color">download cv</a>
+            </li>
+            <!-- /.sn-user -->
+
+            <li *ngFor="let item of HeaderMenu" class="sn-item">
+              <a [href]="item.link" class="waves-effect">
+                <i [class]="item.icon" aria-hidden="true"></i> {{item.title}}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="hello_main_navigation hello_single_index_menu2">
+          <ul id="nav-mobile" class="right main-nav-ul">
+            <li *ngFor="let item of HeaderMenu" [class]="item?.is_active ? 'active' : ''">
+              <a [href]="item.link" [class]="item?.is_active ? 'nav-mobile' : 'waves-effect default'">{{item.title}}</a>
+            </li>
+            <li>
+              <a href="0" class="waves-effect default cd-search-trigger">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- /.main-nav-ul -->
+        <div class="hello_menu_fixed_main_wrapper">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="hello_logo_wrapper">
+                <div class="hello_logo">
+                  <img src="assets/images/logo.png" alt="hello_logo">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+              <div class="hello_fixed_nav_wrapper hello_single_index_menu3">
+                <ul class="hello_nav_fixed">
+                  <li *ngFor="let item of HeaderMenu">
+                    <a [href]="item.link" [class]="item?.is_active ? 'nav-mobile' : 'waves-effect default'">{{item.title}}</a>
+                  </li>
+                  <li>
+                    <a href="0" class="waves-effect default cd-search-trigger">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.main-nav-wrapper -->
+    </nav>
+  </div>
+  <!-- /.
+        -->
+
+  <div id="cd-search" class="cd-search">
+    <form action="#">
+      <input type="search" placeholder="Search...">
+    </form>
+  </div>
+
+</header>
+<!-- /#header-section -->
